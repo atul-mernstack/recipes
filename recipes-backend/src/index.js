@@ -24,7 +24,7 @@ app.post("/recipe", async (req,res)=>{
       const measurementUnit=req.body.measurementUnit;
       const imgName=Date.now();
       const imageUrl=`${imgName}_${file.name}`;
-        file.mv(`../recipes/public/recipe/${imgName}_${file.name}`, async err => {
+        file.mv(`../recipes-frontend/public/recipe/${imgName}_${file.name}`, async err => {
         if (err) {
           return res.status(500).send(err);
         }
